@@ -25,7 +25,9 @@ public class UserController {
         return ResponseEntity.status(400).body("Usuário Já Existe!");
         }
 
-        var passwordHashCode = BCrypt.withDefaults().hashToString(12, userModel.getPassword().toCharArray());
+
+        var passwordHashCode = BCrypt.withDefaults().
+        hashToString(12, userModel.getPassword().toCharArray());
 
         userModel.setPassword(passwordHashCode);
 
