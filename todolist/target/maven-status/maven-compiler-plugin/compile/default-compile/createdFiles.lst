@@ -1,0 +1,10 @@
+br\com\sunrise\todolist\user\UserModel.class
+br\com\sunrise\todolist\task\ITaskRepository.class
+br\com\sunrise\todolist\user\IUserRepository.class
+br\com\sunrise\todolist\task\TaskController.class
+br\com\sunrise\todolist\filter\FilterTaskAuth.class
+br\com\sunrise\todolist\task\TaskModel.class
+br\com\sunrise\todolist\utils\Utils.class
+br\com\sunrise\todolist\errors\ExceptionHandlerController.class
+br\com\sunrise\todolist\TodolistApplication.class
+br\com\sunrise\todolist\user\UserController.class
