@@ -1,24 +1,20 @@
-
-
 ```markdown
-## Meu Projeto
+# Meu Projeto
 
-Este é o repositório do meu projeto, uma aplicação que permite o cadastro de usuários e tarefas
-com autenticação e IDs criptografados.
-Siga as instruções abaixo para executá-lo na sua máquina e realizar operações de cadastro e atualização com o Postman.
+Este é o repositório do meu **projeto**, uma aplicação que permite o cadastro de usuários e tarefas
+com autenticação e IDs criptografados. Siga as instruções abaixo para executá-lo na sua máquina
+e realizar operações de cadastro e atualização com o Postman.
 
-```
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas e tecnologias instaladas em sua máquina:
 
-- Java 17
-- Spring Boot 3
-- Maven
-- Docker (se você planeja implantar em contêiner)
-- Postman
+- **Java 17**
+- **Spring Boot 3**
+- **Maven**
+- **Docker** (se você planeja implantar em contêiner)
+- **Postman**
 
-```
 ## Configurando o Ambiente
 
 1. Clone este repositório em sua máquina:
@@ -75,7 +71,8 @@ Certifique-se de ter as seguintes ferramentas e tecnologias instaladas em sua m�
 7. Importe a coleção do Postman para testar as operações:
    [Link para a coleção do Postman](URL_PARA_SUA_COLECAO_DO_POSTMAN)
 
-8. Use o Postman para realizar operações HTTP POST e PUT para cadastrar e atualizar usuários e tarefas. Certifique-se de seguir as instruções e incluir as informações de autenticação quando necessário.
+8. Use o Postman para realizar operações HTTP POST e PUT para cadastrar e atualizar usuários e tarefas.
+9.  Certifique-se de seguir as instruções e incluir as informações de autenticação quando necessário.
 
 ## Implantação no Docker
 
@@ -102,4 +99,4 @@ Certifique-se de ter as seguintes ferramentas e tecnologias instaladas em sua m�
 Lembre-se de substituir `seu-usuario/seu-projeto` pelo URL do seu repositório real no GitHub e ajustar outras informações específicas do seu projeto, como a configuração da autenticação e criptografia de IDs.
 ```
 
-Certifique-se de criar a coleção no Postman com as solicitações específicas para cada operação de cadastro e atualização, e forneça o link para a coleção no lugar de `URL_PARA_SUA_COLECAO_DO_POSTMAN`.
+Certifique-se de substituir `seu-usuario/seu-projeto` pelo URL do seu repositório real no GitHub e ajustar outras informações específicas do seu projeto, como a configuração da autenticação e criptografia de IDs. Isso deve tornar o seu README mais atraente e legível.
