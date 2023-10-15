@@ -3,8 +3,11 @@
 ```markdown
 ## Meu Projeto
 
-Este é o repositório do meu projeto, uma aplicação que permite o cadastro de usuários e tarefas com autenticação e IDs criptografados. Siga as instruções abaixo para executá-lo na sua máquina e realizar operações de cadastro e atualização com o Postman.
+Este é o repositório do meu projeto, uma aplicação que permite o cadastro de usuários e tarefas
+com autenticação e IDs criptografados.
+Siga as instruções abaixo para executá-lo na sua máquina e realizar operações de cadastro e atualização com o Postman.
 
+```
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas e tecnologias instaladas em sua máquina:
@@ -15,6 +18,7 @@ Certifique-se de ter as seguintes ferramentas e tecnologias instaladas em sua m�
 - Docker (se você planeja implantar em contêiner)
 - Postman
 
+```
 ## Configurando o Ambiente
 
 1. Clone este repositório em sua máquina:
