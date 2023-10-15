@@ -26,9 +26,14 @@ public class FilterTaskAuth extends OncePerRequestFilter {
     
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+     FilterChain filterChain)
             throws ServletException, IOException {
-        
+
+        //gerando o caminho da url para chegar aqui.
+        var servletPath= request.getServletPath();
+        if(servletPath.startsWith("/tasks/")){
+
          //Pegaa a  Autenticação do usúario e senha.
 
          //pegando o numero da Autorização depois de mandar um request via postman com usuario e senha digitados.
@@ -39,7 +44,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
         byte[] authDecode  = Base64.getDecoder().decode(authEnconded);
         //guardando dentro de uma viariavel String e passando como parametro Autentação Codificada.
         var authString = new String(authDecode);
-        //Tirando o : para melhor visualização.
+        //Tirando o : para melhor visualização. [rafael, 1234]
         String[] credentials = authString.split(":");
         String username = credentials[0];// pega apartir da posicação zero
         String password = credentials[1]; // posição 1
@@ -48,22 +53,27 @@ public class FilterTaskAuth extends OncePerRequestFilter {
                 //Validação de Usuário
 
                 var user = repository.findByUsername(username);
+                //if else pra validar
                 if (user == null){
-                    response.sendError(401, "Usuário Sem Autorização");
+                    response.sendError(401);
                 }else{
-
-                   var passwordVerify = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
+                    //Validar senha
+                    //descriptrogafa
+                 var passwordVerify = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
+               if(passwordVerify.verified){ //se for true roda
+                request.setAttribute("idUser", user.getId());
+                filterChain.doFilter(request, response);
+                }else{//false roda esse
+                response.sendError(401);
                 }
-                //Validação de Senha
+                }
+            }else{
+                filterChain.doFilter(request, response);
+            }
 
-                //Tudo OK ?> Segue Viagem
 
-                //Erro na Validação ? Mensagem de Erro.
-
-
-    
-
-        filterChain.doFilter(request, response);
+               
+        
 
 
     }
